@@ -6,9 +6,10 @@ function adicionar() {
     if (friendName == '') {
         alert('PAM!');
     } else if (friendList.includes(friendName)) {
-        alert('O nome ja existe. insira também um sobre nome');
+        alert('O nome ja existe. insira também um sobrenome');
     } else {
         friendList.push(friendName);
+        document.getElementById('nome-amigo').value = '';
     }
     
     //Adicionar nomes no campo

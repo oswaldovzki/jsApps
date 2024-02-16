@@ -4,16 +4,6 @@ body {
   position: relative;
 }
 
-.background__detail {
-  background-color: #00f4bf;
-  height: calc(100% - 389px);
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 195px;
-  z-index: 0;
-}
-
 .button {
   align-items: center;
   background-color: transparent;
@@ -31,13 +21,13 @@ body {
   line-height: normal;
   padding: 16px 24px;
   text-align: center;
-  width: 208px;
+  width: 165px;
 }
 
 .content {
   background-color: #000;
-  border: 1px solid #1875e8;
-  filter: drop-shadow(0px 0px 30px #1875e8);
+  border: 1px solid #e92440;
+  filter: drop-shadow(0px 0px 30px #e92440);
   height: 871px;
   left: 50%;
   margin: 0 auto;
@@ -46,22 +36,28 @@ body {
   transform: translate(-50%, -50%);
   width: 75%;
   z-index: 1;
+
 }
 
-.content__corner-rectangle {
-  background-color: #00f4bf;
-  bottom: -15px;
-  clip-path: polygon(0% 100%, 0% 50%, 4% 0%, 100% 0%, 100% 50%, 96% 100%);
-  height: 33px;
+.content::after {
+  content: "";
+  background-image: url('./assets/xecret-santa.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   position: absolute;
-  right: 32px;
-  width: 511px;
-  z-index: 3;
+  z-index: -1;   
 }
 
 .content__main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 80px;
   justify-content: start;
   padding: 100px;
@@ -69,7 +65,8 @@ body {
 
 .friends__container {
   align-items: center;
-  border: 1px solid #1875e8;
+  border: 1px solid #e92440;
+  background-color: #e9244243;
   border-radius: 8px;
   color: #fff;
   display: flex;
@@ -78,8 +75,8 @@ body {
   justify-content: center;
   line-height: 160%;
   margin-top: 1rem;
-  padding: 24px;
-  width: 453px;
+  padding: 8px 16px;
+  height: 56px;
 }
 
 .friends__container > p {
@@ -90,7 +87,7 @@ body {
 }
 
 .friends__title {
-  color: #1875e8;
+  color: #e92440;
   font-size: 24px;
   font-weight: 700;
   line-height: 110%;
@@ -106,13 +103,13 @@ body {
 .form__buttons {
   align-items: center;
   display: flex;
-  gap: 32px;
+  justify-content: space-between;
 }
 
 .form__input {
   align-items: center;
-  background-color: transparent;
-  border: 1px solid #1875e8;
+  background-color: #e9244243;
+  border: 1px solid #e92440;
   border-radius: 8px;
   color: #fff;
   display: flex;
@@ -122,7 +119,6 @@ body {
   margin-bottom: 32px;
   outline: none;
   padding: 8px 16px;
-  width: 517px;
 }
 
 .form__input::placeholder {
@@ -130,8 +126,12 @@ body {
   font-size: 21px;
 }
 
+.form__input::focus {
+  background-color: #e9244243;
+}
+
 .form__label {
-  color: #1875e8;
+  color: #e92440;
   font-size: 24px;
   font-weight: 700;
   line-height: 110%;
@@ -139,13 +139,10 @@ body {
 }
 
 .form__link {
-  color: #00f4bf;
-  cursor: pointer;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 110%;
-  text-align: center;
-  text-decoration-line: underline;
+  color: #0e5304;
+  align-self: center;
+  text-decoration: none;
+  background-color: #aad1a4;
 }
 
 .page__image {
@@ -167,20 +164,21 @@ body {
 }
 
 .prizeDraw__title {
-  color: #00f4bf;
+  color: #18b600;
   font-size: 24px;
   font-weight: 700;
   line-height: 110%;
 }
 
 .primary {
-  background-color: #1875e8;
+  background-color: #e92440;
   color: #fff;
 }
 
 .section--results {
-  align-items: start;
   display: flex;
+  align-items: start;
+  flex-direction: column;
   font-family: Inter;
   font-style: normal;
   gap: 48px;
@@ -197,10 +195,10 @@ body {
 }
 
 .section__title > span {
-  color: #1875e8;
+  color: #e92440;
 }
 
 .secondary {
   background-color: #fff;
-  color: #1875e8;
+  color: #e92440;
 }
